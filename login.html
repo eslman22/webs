@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>English Tutoring</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  
+    h1 {
+      text-align: center;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    label {
+      margin-bottom: 0.5em;
+    }
+  
+    input[type="text"], select {
+      width: 300px;
+      padding: 0.5em;
+      font-size: 16px;
+    }
+  
+    button[type="submit"] {
+      padding: 0.5em;
+      font-size: 16px;
+      margin-top: 1em;
+    }
+  
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      padding: 1em;
+      font-size: 16px;
+    }
+  
+    footer {
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <title>English Tutoring</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Add responsive behavior with media queries -->
+<style>
+  /* Style menu bar for small screens */
+  @media (max-width: 600px) {
+    .menu-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-item {
+      padding: 5px 0;
+    }
+  }
+
+  .newref{
+    display:block;
+    margin-top:10px;
+  }
+</style>
+
+<!-- Add a dropdown menu for small screens -->
+<script>
+  // Show dropdown menu on click
+  const dropdownTrigger = document.querySelector('.dropdown-trigger');
+  dropdownTrigger.addEventListener('click', () => {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Hide dropdown menu when clicked outside of it
+  window.addEventListener('click', event => {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (event.target !== dropdownMenu && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+</script>
+
+</head>
+<body>
+  
+  <!-- Add dropdown menu HTML -->
+<div class="menu-bar">
+  <div class="dropdown-trigger">
+    Menu
+    <i class="fas fa-caret-down"></i>
+  </div>
+  <div class="dropdown-menu">
+    <a href="login.html" class="menu-item">Login</a>
+    <a href="tutors.html" class="menu-item">Tutors</a>
+    <a href="pricing.html" class="menu-item">Pricing</a>
+    <a href="faq.html" class="menu-item">FAQ</a>
+    <a href="index.html" class="menu-item">Home</a>
+  </div>
+</div>
+
+<!-- Add dropdown menu CSS -->
+<style>
+  .dropdown-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+  }
+</style>
+
+<!-- Import font awesome icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- HTML for menu bar -->
+<div class="menu-bar">
+  <a href="login.html" class="menu-item">Login</a>
+  <a href="tutors.html" class="menu-item">Tutors</a>
+  <a href="pricing.html" class="menu-item">Pricing</a>
+  <a href="faq.html" class="menu-item">FAQ</a>
+  <a href="index.html" class="menu-item">Home</a>
+</div>
+
+<!-- CSS for menu bar -->
+<style>
+  .menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+  }
+
+  .menu-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .menu-item:hover {
+    background-color: #444;
+  }
+</style>
+
+<!-- JavaScript for menu bar -->
+<script>
+  // Highlight current page in the menu
+  const currentPage = document.querySelector('.current-page');
+  const menuItems = document.querySelectorAll('.menu-item');
+  menuItems.forEach(item => {
+    if (item.innerText === currentPage.innerText) {
+      item.style.backgroundColor = '#555';
+    }
+  });
+</script>
+  
+  <h1>Create your account</h1>
+  <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label><br>
+<input type="text" id="email" name="email"><br><br>
+
+<label for="lesson">Choose a lesson:</label><br>
+<select id="lesson" name="lesson">
+  <option value="grammar">Grammar</option>
+  <option value="vocabulary">Vocabulary</option>
+  <option value="pronunciation">Pronunciation</option>
+</select>
+
+<button type="submit">Sign up for a lesson</button>
+</form> 
+<p>Already signed up? <a href="login.html">Log in here</a>.</p>
+<p>Our top tutors:</p>
+<ul>
+  <li>Jane Doe</li>
+  <li>John Doe</li>
+  <li>Jane Smith</li>
+</ul>
+<p>Check out our <a href="testimonials.html">testimonials</a> to see what our satisfied customers have to say about our service.</p>
+<footer>
+  <p>Copyright 2021 English Tutoring</p>
+</footer>
+<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const lesson = form.elements.lesson.value;
+
+    alert(`Thank you, ${name}! We have received your request for a ${lesson} lesson. We will contact you at ${email} to confirm your lesson details.`);
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

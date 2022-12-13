@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESL Grammar Quiz</title>
+    <style>
+      .button{
+        margin-top:10px;
+        background-color: #0072b1;
+        border:none;
+        color:white;
+        padding-left:20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom:10px;
+        border-radius: 10px;
+        margin-left:15px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>ESL Grammar Quiz</h1>
+    <h2>Instructions: Choose the correct word to complete each sentence</h2>
+    <a href ="index.html"> Click here to go back to the Home Page</a>
+    <p>1. She _______ a book every day.</p>
+    <input type="radio" name="q1" value="reads">reads<br>
+    <input type="radio" name="q1" value="read">read<br>
+    <input type="radio" name="q1" value="is reading">is reading<br>
+    <p>2. They _______ to the park every weekend.</p>
+    <input type="radio" name="q2" value="go">go<br>
+    <input type="radio" name="q2" value="went">went<br>
+    <input type="radio" name="q2" value="are going">are going<br>
+
+    <p>3. They _______ on the phone every evening.</p>
+    <input type="radio" name="q3" value="talked">talked<br>
+    <input type="radio" name="q3" value="is talking">is talking<br>
+    <input type="radio" name="q3" value="talking">talking<br>
+
+    <p>4. Lisa works faster than Tony, so Tony does _______ work</p>
+    <input type="radio" name="q2" value="go">little<br>
+    <input type="radio" name="q2" value="went">less<br>
+    <input type="radio" name="q2" value="are going">few<br>
+
+    <p>5. A bicycle moves _______ than a car</p>
+    <input type="radio" name="q2" value="go">slowly<br>
+    <input type="radio" name="q2" value="went">fast<br>
+    <input type="radio" name="q2" value="are going">slower<br>
+    <button class = "button" type="submit" onclick="checkAnswers9()">Submit</button>
+    <script>
+      function checkAnswers9() {
+        var correct = 0;
+        if (document.querySelector('input[name="q1"]:checked').value == "reads") {
+          correct++;
+        }
+        if (document.querySelector('input[name="q2"]:checked').value == "go") {
+          correct++;
+        }
+        if (document.querySelector('input[name="q3"]:checked').value == "talked") {
+          correct++;
+        }
+        alert("You got " + correct + " out of 3 questions correct!");
+      }
+    </script>
+  </body>
+</html>

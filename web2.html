@@ -1,0 +1,59 @@
+<a href ="index.html"> Click here to go back to the Home Page</a>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Short Stories</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    .story {
+      border: 1px solid black;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .story h2 {
+      margin-top: 0;
+    }
+    .story p {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Short Stories</h1>
+  <div class="stories"></div>
+  <script>
+    const stories = [
+      {
+        title: "The Three Little Pigs",
+        body: "Once upon a time, there were three little pigs who lived in the forest..."
+      },
+      {
+        title: "Cinderella",
+        body: "Cinderella lived with her wicked stepmother and stepsisters. She was a kind and gentle girl..."
+      },
+      {
+        title: "The Tortoise and the Hare",
+        body: "Once upon a time, there was a hare who boasted about his speed. He laughed at the slow tortoise..."
+      }
+    ];
+    
+// Loop through stories array and add each one to the page
+const storiesContainer = document.querySelector(".stories");
+for (let story of stories) {
+  storiesContainer.innerHTML += `
+    <div class="story">
+      <h2>${story.title}</h2>
+      <p>${story.body}</p>
+    </div>
+  `;
+}
+
+ </script>
+</body>
+</html>

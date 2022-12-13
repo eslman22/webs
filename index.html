@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>English Tutoring</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Add responsive behavior with media queries -->
+<style>
+  /* Style menu bar for small screens */
+  @media (max-width: 600px) {
+    .menu-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-item {
+      padding: 5px 0;
+    }
+  }
+
+  .newref{
+    display:block;
+    margin-top:10px;
+  }
+</style>
+
+<!-- Add a dropdown menu for small screens -->
+<script>
+  // Show dropdown menu on click
+  const dropdownTrigger = document.querySelector('.dropdown-trigger');
+  dropdownTrigger.addEventListener('click', () => {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.classList.toggle('show');
+  });
+
+  // Hide dropdown menu when clicked outside of it
+  window.addEventListener('click', event => {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (event.target !== dropdownMenu && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+</script>
+
+</head>
+<body>
+  
+  <!-- Add dropdown menu HTML -->
+<div class="menu-bar">
+  <div class="dropdown-trigger">
+    Menu
+    <i class="fas fa-caret-down"></i>
+  </div>
+  <div class="dropdown-menu">
+    <a href="login.html" class="menu-item">Login</a>
+    <a href="tutors.html" class="menu-item">Tutors</a>
+    <a href="pricing.html" class="menu-item">Pricing</a>
+    <a href="faq.html" class="menu-item">FAQ</a>
+    <a href="home.html" class="menu-item">Home</a>
+  </div>
+</div>
+
+<!-- Add dropdown menu CSS -->
+<style>
+  .dropdown-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+  }
+</style>
+
+<!-- Import font awesome icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- HTML for menu bar -->
+<div class="menu-bar">
+  <a href="login.html" class="menu-item">Login</a>
+  <a href="tutors.html" class="menu-item">Tutors</a>
+  <a href="pricing.html" class="menu-item">Pricing</a>
+  <a href="faq.html" class="menu-item">FAQ</a>
+  <a href="home.html" class="menu-item">Home</a>
+</div>
+
+<!-- CSS for menu bar -->
+<style>
+  .menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+  }
+
+  .menu-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .menu-item:hover {
+    background-color: #444;
+  }
+</style>
+
+<!-- JavaScript for menu bar -->
+<script>
+  // Highlight current page in the menu
+  const currentPage = document.querySelector('.current-page');
+  const menuItems = document.querySelectorAll('.menu-item');
+  menuItems.forEach(item => {
+    if (item.innerText === currentPage.innerText) {
+      item.style.backgroundColor = '#555';
+    }
+  });
+</script>
+
+  <h1>English Tutoring</h1>
+  <p class ="welcome">Welcome to our English tutoring website! We offer personalized lessons to help you improve your English skills. </p>
+  <a href ="web.html"> Click here to take a diagnostic test to find your English level (A1-C2)</a>
+  <a href ="web2.html" class ="newref"> Click here for reading comprehension practice with fun and original stories</a>
+  <a href ="web3.html" class ="newref"> Click here for free sample lessons and cheatsheets</a>
+  <div id="tutor-list">
+    <h2>Our Tutors</h2>
+    <ul>
+      <li>Tamou Elbouanani</li>
+      <li>Freslie Salibay</li>
+      <li>Ian McAndrews</li>
+    </ul>
+  </div>
+  <div id="schedule-form">
+    <h2>Schedule a Lesson</h2>
+    <form>
+      <label>Name:</label>
+      <input type="text" name="name"><br>
+      <label>Tutor:</label>
+      <select name="tutor">
+        <option>Tamou Elbouanani</option>
+        <option>Ian McAndrews</option>
+        <option>Freslie Salibay</option>
+      </select><br>
+      <label>Date and Time:</label>
+      <input type="datetime-local" name="datetime"><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      <p>"I was struggling with my English skills, but after just a few lessons with Tamou, I saw a huge improvement. She is an excellent tutor and I highly recommend her."</p>
+      <p>- Viktor Arun</p>
+    </div>
+    <div class="testimonial">
+      <p>"Freslie is a great tutor! He was patient and helped me understand even the most difficult concepts. I would definitely work with him again."</p>
+      <p>- Félix Agapitos</p>
+    </div>
+    <div class="testimonial">
+      <p>"I was hesitant to try online tutoring, but it turned out to be a great experience. Ian was able to explain everything clearly and I was able to improve my English skills in just a few short weeks."</p>
+      <p>- Alyson Yasmin</p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

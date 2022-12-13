@@ -1,0 +1,70 @@
+
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+#tutor-list {
+  margin: 32px 0;
+}
+
+#tutor-list h2 {
+  margin-bottom: 8px;
+}
+
+#tutor-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+#schedule-form {
+  margin: 32px 0;
+}
+
+#schedule-form label {
+  display: block;
+  margin-bottom: 8px;
+  
+}
+
+#schedule-form input[type="text"],
+#schedule-form input[type="datetime-local"],
+#schedule-form select {
+  width: 200px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  
+}
+
+#schedule-form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top:20px;
+}
+
+#testimonials {
+  margin: 32px 0;
+}
+
+#testimonials h2 {
+  margin-bottom: 16px;
+}
+
+.testimonial {
+  margin-bottom: 16px;
+}
+
+.testimonial p:last-child {
+  font-style: italic;
+}
+
+
